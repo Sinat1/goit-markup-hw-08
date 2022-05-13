@@ -1,0 +1,40 @@
+.customers__title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+}
+
+.customers__list {
+    display: flex;
+}
+
+.customers__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.customers__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $team-section-social-network-color;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    color: $team-section-social-network-color;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        border: 1px solid $accent-color;
+    }
+}
+
+.customers__icon {
+    fill: currentColor;
+}

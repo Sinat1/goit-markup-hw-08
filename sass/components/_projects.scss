@@ -1,0 +1,41 @@
+.projects {
+    padding-top: 0;
+}
+
+.projects__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: $title-text-color;
+}
+
+.projects__list {
+    display: flex;
+}
+
+.projects__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.projects__block {
+    position: relative;
+}
+
+.projects__text {
+    position: absolute;
+    bottom: 0;
+
+    width: 370px;
+    padding: 27px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    background-color: rgba(47, 48, 58, 0.8);
+}

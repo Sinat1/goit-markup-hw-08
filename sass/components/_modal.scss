@@ -1,0 +1,224 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $backdrop-background-color;
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+    transition: opacity 250ms $timing-function;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    min-width: 528px;
+    min-height: 581px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $timing-function,
+        opacity 250ms $timing-function;
+
+    background-color: $primary-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal__close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 0 2px;
+    padding: 0;
+
+    border: none;
+    cursor: pointer;
+    background-color: $primary-white-color;
+}
+
+.modal__icon-close {
+    fill: $primary-black-color;
+    transition: fill 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+
+.modal__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+}
+
+.modal__form-field {
+    position: relative;
+    margin-bottom: 28px;
+
+   &:nth-child(4) {
+        margin-bottom: 20px;
+    }
+}
+
+.modal__form-label {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+
+.modal__form-svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: fill 250ms $timing-function;
+
+    .modal__form-field:focus-within & {
+        fill: $accent-color;
+    }
+}
+
+.modal__input {
+    padding-left: 42px;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: $primary-text-color;
+    transition: border 250ms $timing-function;
+
+    &:focus {
+        border: 1px solid $accent-color;
+        outline: none;
+    }
+}
+
+.modal__textarea {
+    resize: none;
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+    transition: border 250ms $timing-function;
+
+   &::placeholder {
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+    
+   &:focus {
+        border: 1px solid $accent-color;
+        outline: none;
+    }
+}
+
+.modal__policy-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.modal__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.modal__checkbox-border {
+    display: flex;
+    align-items: center;
+    border: 2px solid $title-text-color;
+    border-radius: 4px;
+    margin-right: 7px;
+    transition: background-color 250ms $timing-function;
+
+    .modal__checkbox:checked + & {
+        background-color: $accent-color;
+        background-origin: border-box;
+        border-color: $accent-color;
+    }
+}
+
+.modal__icon-check {
+    fill: $primary-white-color;
+}
+
+.modal__policy-agreement {
+    margin-left: 3px;
+    color: $accent-color;
+}
+
+.modal__form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: $hero-button-hover-color;
+    }
+}
+

@@ -1,0 +1,22 @@
+
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$hero-button-hover-color: #188ce8;
+$primary-white-color: #ffffff;
+$portfolio-card-border-color: #eeeeee;
+$header-border-color: #ececec;
+$hero-footer-section-background-color: #2f303a;
+$team-section-background-color: #f5f4fa;
+$team-section-social-network-color: #afb1b8;
+$backdrop-background-color: rgba(0, 0, 0, 0.2);
+$primary-black-color: #000;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
+body {
+    font-family: Roboto, 'sans-serif';
+    letter-spacing: 0.03em;
+    background-color: $primary-white-color;
+    color: $primary-text-color;
+}
