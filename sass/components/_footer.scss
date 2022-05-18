@@ -1,159 +1,229 @@
 footer {
-    background-color: $hero-footer-section-background-color;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  background-color: $hero-footer-section-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__columns {
+  display: block;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
-// FOOTER-ADDRESS START 
+// FOOTER-ADDRESS START
+.footer-address {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+    margin-left: 76px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
 .footer-address__logo {
-    display: inline-block;
-    margin-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .footer-address__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 1200px) {
     margin-bottom: 9px;
+  }
 }
 
 .footer-address__link {
-    display: inline-block;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    transition: color 250ms $timing-function;
+  display: inline-block;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 250ms $timing-function;
 
-    &:hover,
-    &:focus {
-        color: $primary-white-color;
-    }
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+  }
 }
-// FOOTER-ADDRESS END 
+// FOOTER-ADDRESS END
 
-// JOIN START 
+// JOIN START
 .join {
-    margin-left: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .join__title {
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $primary-white-color;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
 }
 
 .join__list {
-    display: flex;
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
 }
 
 .join__item:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .join__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $primary-white-color;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    transition: background-color 250ms $timing-function;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary-white-color;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms $timing-function;
 
-    &:hover,
-    &:focus {
-        background-color: $accent-color;
-    }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .join__icon {
-    fill: currentColor;
+  fill: currentColor;
 }
-// JOIN END 
+// JOIN END
 
-// MAILING START 
+// MAILING START
 .mailing {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
     margin-left: auto;
     display: flex;
+  }
 }
 
 .mailing__title {
-    display: block;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $primary-white-color;
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
 }
 
 .mailing__form {
-    display: block;
-    margin-top: 20px;
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 50px;
+  background-color: $hero-footer-section-background-color;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  transition: border 250ms $timing-function;
+
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: none;
+  }
+
+  &::placeholder {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    width: 358px;
-    height: 50px;
-    background-color: $hero-footer-section-background-color;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-sizing: border-box;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    padding-left: 16px;
-    transition: border 250ms $timing-function;
+  }
 
-    &:focus {
-        border: 1px solid $accent-color;
-        outline: none;
-    }
-    
-    &::placeholder {
-        font-size: 16px;
-        line-height: 1.25;
-        letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 0.6);
-    }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .mailing__button {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $hero-button-hover-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
     align-self: flex-end;
     margin-left: 12px;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-    color: $primary-white-color;
-    background-color: $accent-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 250ms $timing-function;
-
-    &:hover,
-    &:focus {
-        background-color: $hero-button-hover-color;
-    }
+  }
 }
 
 .mailing__icon {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-// MAILING END 
+// MAILING END
